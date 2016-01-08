@@ -1,0 +1,15 @@
+{
+  "name": "WSOP-AV-Control-System",
+  "version": "1.0.0",
+  "description": "Frontend to WSOP AV Control System.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+
+  "author": "Nicholas Petty",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.0"
+  }
+}
