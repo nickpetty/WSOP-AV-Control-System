@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/<out>/<source>')
 def mustard(out, source):
-	switch.set(out, source)
+	switch.set(int(out), int(source))
 	return Response(status=200)
 
 if __name__ == '__main__':

@@ -1,16 +1,36 @@
 [class*='col-'] {
 	float: left;
-	border-style: dashed;
+	border-style: solid;
 }
 
 .col-2-3 {
 	width: 66.66%;
+	height: 90%;
 }
 
 .col-1-3 {
 	width: 33.33%;
+	height: 90%;
 }
 
+.col-top {
+	width: 100%;
+	height: 10%
+}
+
+.col-contact {
+	width: 100%;
+	height: 20%;
+	margin-top: 150px;
+	border-width: medium 0 0 0;
+	bottom: 0;
+}
+
+.col-lights{
+	width: 100%;
+	height: 20%;
+	border-width: 0 0 medium 0;
+}
 .grid:after {
 	content: "";
 	display: table;
@@ -31,7 +51,7 @@
 }
 
 #tvHeader {
-	margin-top: 100px;
+	margin-top: 80px;
 	margin-bottom: 5px;
 }
 

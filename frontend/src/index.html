@@ -1,7 +1,7 @@
 <html>
 
 	<head>
-		<link rel="stylesheet" type="text/css" href='../static/css/style.css'>
+		<link rel="stylesheet" type="text/css" href='css/style.css?v=11'>
 		<script>
 			function changeSource (out) {
 				var e = document.getElementById('sourceSelection');
@@ -31,14 +31,21 @@
 
 	<body>
 		<div class="grid">
-			<div class="col-2-3">
+			<div class="col-top">
 				<center>
-					<img src="../static/img/floor.jpg" width=600 height=700>
+					<h2>WSOP AV Control System</h2>
 				</center>
 			</div>
+
+			<div class="col-2-3">
+				<center>
+					<img src="img/floor1.jpg" width=600 height=625>
+				</center>
+			</div>
+
 			<div class="col-1-3">
 				<center>
-					<div id="lightControls">
+					<div class="col-lights">
 						<h2>Light Controls:<h2>
 						<button onclick=lights('ON')>ON</button>
 						<button onclick=lights('OFF')>OFF</button>
@@ -170,14 +177,15 @@
 						</select>
 					</span></li>
 				</ul>
-			</center>
-				<script>
-					function lights (cmd) {
-						var xmlhttp = new XMLHttpRequest();
-						xmlhttp.open("GET", '/lights/' + cmd, true);
-						xmlhttp.send();
-					};
-				</script>
+				</center>
+				<div class='col-contact'>
+					<center>
+						<h3>Contact:</h3>
+						Office - 662 404-4074 (ext. 44074)<p>
+						AV - 662 404-2106<p>
+						Nick - 662 288-1214
+					</center>
+				</div>	
 			</div>
 		</div>
 	</body>
