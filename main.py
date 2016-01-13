@@ -1,36 +1,43 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 from cueserver import CueServer
 #from ledctrl import *
 import urllib2
 
-cs = CueServer('127.0.0.1')
+cs = CueServer('192.168.1.92')
 
 app = Flask(__name__)
 
 
 @app.route('/video/<out>/<source>')
 def switch(out, source):
-	ip = '127.0.0.1'
-	req = 'http://' + str(ip) + ':8181/' + str(out) + '/' +str(source)
-	urllib2.urlopen(req)
+	# ip = '127.0.0.1'
+	# req = 'http://' + str(ip) + ':8181/' + str(out) + '/' +str(source)
+	# urllib2.urlopen(req)
+	print 'out: ' + str(out)
+	print 'source: ' + str(source)
+	return Response(status=200)
 
-@app.route('/lights/cmd')
+@app.route('/lights')
+def lightPage():
+	return render_template('lights.html')
+
+@app.route('/lights/<cmd>')
 def lights(cmd):
 	if cmd == 'ON':
 		print 'ON'
 		# LEDLights(1)
-		# cs.cue('Cue 1 Go') # Set Cue 1 All ON
-		pass
+		cs.cue('Cue 1 Go') # Set Cue 1 All ON
+		return Response(status=200)
 
 	if cmd == 'OFF':
 		print 'OFF'
 		# LEDLights(0)
-		# cs.cue('Cue 2 Go') # Set Cue 2 All OFF
-		pass
+		cs.cue('Channel 1 > 255 At 0') # Set Cue 2 All OFF
+		return Response(status=200)
 
 @app.route('/')
 def index():
-	pass
+	return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=9191)
