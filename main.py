@@ -7,7 +7,6 @@ cs = CueServer('192.168.1.92')
 
 app = Flask(__name__)
 
-
 @app.route('/video/<out>/<source>')
 def switch(out, source):
 	# ip = '127.0.0.1'

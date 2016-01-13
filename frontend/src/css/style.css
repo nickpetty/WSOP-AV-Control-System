@@ -31,6 +31,11 @@
 	height: 20%;
 	border-width: 0 0 medium 0;
 }
+
+.spacer {
+	margin-top: 20px;
+}
+
 .grid:after {
 	content: "";
 	display: table;
