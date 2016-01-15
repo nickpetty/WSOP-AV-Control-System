@@ -41,7 +41,7 @@ class Mondo:
 	def set(o, i):
 		ser = serial.Serial(self.port)
 		cmd = 'B' + o + i
-		ser.write(bytes(cmd + '\r\n', encoding='ascii'))
+		ser.write(cmd + '\r\n')
 		r = ser.readline()
 		r = r.decode('UTF-8').replace('\n', '')
 		if r == 'OK>':

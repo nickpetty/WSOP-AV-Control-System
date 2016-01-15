@@ -12,8 +12,8 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1024, height: 775, frame: false});
-  mainWindow.setMenu(null);
+  mainWindow = new BrowserWindow({width: 1024, height: 775, frame: true});
+  // mainWindow.setMenu(null);
   // and load the index.html of the app.
   // mainWindow.loadURL('http://127.0.0.1:9191/');
   mainWindow.loadURL('file://' + __dirname + '/src/index.html');

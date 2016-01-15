@@ -1,7 +1,7 @@
 from flask import Flask, Response
 from mondo import Mondo
 
-switch = Mondo(1)
+switch = Mondo('/dev/ttyAMA0')
 
 app = Flask(__name__)
 
