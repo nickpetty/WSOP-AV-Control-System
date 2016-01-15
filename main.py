@@ -9,12 +9,12 @@ app = Flask(__name__)
 
 @app.route('/video/<out>/<source>')
 def switch(out, source):
-	# cmd = 'B' + str(out) + str(source)
-	# ip = '192.168.137.25'
-	# req = 'http://' + str(ip) + ':8181/' + str(out) + '/' + str(source)
-	# urllib2.urlopen(req)
-	print 'out: ' + str(out)
-	print 'source: ' + str(source)
+	cmd = 'B' + str(out) + str(source)
+	ip = '192.168.1.107'
+	req = 'http://' + str(ip) + ':8181/' + str(out) + '/' + str(source)
+	urllib2.urlopen(req)
+	# print 'out: ' + str(out)
+	# print 'source: ' + str(source)
 	return Response(status=200)
 
 @app.route('/lights')
