@@ -38,7 +38,7 @@ class Mondo:
 	# 	config.write(f)
 	# 	ser.close()
 		
-	def set(o, i):
+	def set(self, o, i):
 		ser = serial.Serial(self.port)
 		cmd = 'B' + o + i
 		ser.write(cmd + '\r\n')
