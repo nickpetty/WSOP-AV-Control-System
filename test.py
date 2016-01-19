@@ -1,8 +1,8 @@
-from bosecsp import Bose
+from bose import csp
 from binascii import hexlify
 import time
 
-bose = Bose('192.168.1.102')
+bose = csp('192.168.1.102')
 
 #bose.setMute('Wireless Mic Gain', 'toggle')
 
